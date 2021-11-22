@@ -5,13 +5,11 @@
     const sun = document.getElementsByName('sunlight')[0];
     const water = document.getElementsByName('wateringcan')[0];
     const dog = document.getElementsByName('dog')[0];
-    
-    
+        
     GREENTHUMB.preload = setTimeout(function() {
         document.querySelector('.load-container').classList.add('loaded');
     }, 1500);
 
-    
     GREENTHUMB.list = {
         sunValue: '',
         walterValue: '',
@@ -40,7 +38,15 @@
         .then(data => {
             return data.json();
         }).then(res => {
-            console.log(res);
+            if (res.status && res.status !== 200) {
+                document.querySelector('.greenthumb__results--fail').classList.add('active');
+                document.querySelector('.greenthumb__results--success').classList.remove('active');
+            } else {
+                document.querySelector('.greenthumb__results--success').classList.add('active');
+                document.querySelector('.greenthumb__results--fail').classList.remove('active');
+            }
+        }).catch(errors => {
+            console.log(errors);
         });
     };
 

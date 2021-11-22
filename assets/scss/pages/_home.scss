@@ -71,4 +71,11 @@
             }
         }
     }
+
+    &__results {
+        &--fail, &--success {
+            display: none;
+            &.active {display: block;}
+        }
+    }
 }

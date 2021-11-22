@@ -44,6 +44,7 @@
             } else {
                 document.querySelector('.greenthumb__results--success').classList.add('active');
                 document.querySelector('.greenthumb__results--fail').classList.remove('active');
+                // faltou aplicar o conteudo usando innerHTML, nao deu tempo
             }
         }).catch(errors => {
             console.log(errors);

@@ -1,0 +1,45 @@
+// VARIABLES
+$green: #15573F;
+$green-light: #75BC97;
+$orange: #FD9872;
+
+// RESPONVIVE
+$mobile: 425px;
+$tablet: 768px;
+$laptop: 1224px;
+$desktop: 1440px;
+
+// BASES
+* { box-sizing: border-box; }
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+figure {
+    padding: 0;
+    margin: 0;
+}
+
+// PRELOADIND
+.load-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transition: all .3s linear;
+    opacity: 1;
+    visibility: visible;
+    z-index: 9999999;
+
+    &.loaded {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+

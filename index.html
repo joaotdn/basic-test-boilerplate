@@ -10,8 +10,40 @@
     />
     <link rel="stylesheet" href="./index.scss" />
   </head>
-
   <body>
-    <img src="images/icons/logo-white.svg" alt="Greenthumb" />
+    <div class="greenthumb page-item">
+      <header class="greenthumb__hero">
+        <figure class="greenthumb__hero--logo">
+          <div class="row">
+            <a href="#" title="Back to home">
+              <img src="./assets/images/hero/desktop/logo-desktop.png" alt="Greenthumb brand" class="hide-from-mobile">
+            </a>
+          </div>
+        </figure>
+        <img 
+            src="./assets/images/hero/desktop/left-leaves.png"
+            alt="Green plants"
+            class="hide-from-mobile greenthumb__hero--plt-left animate__animated animate__fadeInLeft animate__fast">
+        <img 
+          src="./assets/images/hero/desktop/plantperson.png"
+          alt="Man holding a plant"
+          class="hide-from-mobile greenthumb__hero--plt-person animate__animated animate__fadeInRight animate__fast">
+        <img 
+          src="./assets/images/hero/desktop/right-leaves.png"
+          alt="Green plants"
+          class="hide-from-mobile greenthumb__hero--plt-right animate__animated animate__fadeInRight animate__fast">
+
+        <img 
+            src="./assets/images/hero/mobile/mobile-leaves.png"
+            alt="Green plants"
+            class="hide-from-desktop greenthumb__hero--plt-mobile animate__animated animate__fadeInDown">
+          <img 
+            src="./assets/images/hero/mobile/mobile-plantperson.png"
+            alt="Man holding a plant"
+            class="hide-from-desktop greenthumb__hero--plt-person-mobile animate__animated animate__fadeInLeft">
+      </header>
+    </div>
+    <div class="load-container"></div>
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>

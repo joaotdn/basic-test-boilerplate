@@ -1,0 +1,81 @@
+
+%position-abs {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+}
+        
+.greenthumb {
+    &__hero {
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        background-color: $green-light;
+
+        &--logo {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        &--plt-left {
+            @extend %position-abs;
+            left: 0;
+            z-index: 9;
+            animation-delay: 1.5s;
+        }
+        &--plt-right {
+            @extend %position-abs;
+            right: 0;
+            z-index: 9;
+            animation-delay: 1.8s;
+        }
+        &--plt-person {
+            @extend %position-abs;
+            z-index: 1;
+            animation-delay: 2s;
+        }
+        
+        &--plt-mobile {
+            position: absolute;
+            top: -96%;
+            left: 0;
+            width: 100%;
+            animation-delay: 2s;
+        }
+        &--plt-person-mobile {
+            position: absolute;
+            left: 24%;
+            transform: translate(-50%, -50%);
+            top:41%;
+            animation-delay: 3s;
+        }
+
+        @media screen and (min-width: calc($mobile + 1px)) and (max-width: $tablet) {
+            &--plt-mobile {
+                top: -70%;
+                left: 0;
+            }
+            &--plt-person-mobile {
+                left: 11%;
+                top: 40%;
+            }
+        }
+
+        @media screen and (min-width: $laptop) and (max-width: calc($desktop - 1px)) {
+            &--plt-left {
+                left: -70%;
+                display: block;
+            }
+            &--plt-right {
+                right: 0;
+                display: block;
+            }
+            &--plt-person {
+                right: 25%;
+                display: block;
+            }
+        }         
+    }
+}

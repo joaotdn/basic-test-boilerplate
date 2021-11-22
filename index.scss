@@ -1,4 +1,9 @@
-body {
-    font-family: "Montserrat", sans-serif;
-    background-color: green;
-}
+@import 'animate.css';
+@import '/assets/scss/settings';
+
+// UTILS
+@import './assets/scss/utils/responsive';
+@import './assets/scss/utils/text';
+
+// PAGES
+@import './assets/scss/pages/home';

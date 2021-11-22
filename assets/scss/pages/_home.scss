@@ -1,81 +1,74 @@
-
-%position-abs {
-    position: absolute;
-    top: 0;
-    height: 100vh;
-}
-        
 .greenthumb {
     &__hero {
         height: 100vh;
         width: 100%;
         overflow: hidden;
         position: relative;
-        background-color: $green-light;
-
-        &--logo {
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-
-        &--plt-left {
-            @extend %position-abs;
-            left: 0;
-            z-index: 9;
-            animation-delay: 1.5s;
-        }
-        &--plt-right {
-            @extend %position-abs;
-            right: 0;
-            z-index: 9;
-            animation-delay: 1.8s;
-        }
-        &--plt-person {
-            @extend %position-abs;
-            z-index: 1;
-            animation-delay: 2s;
-        }
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom center;
+        background-image: url(../../projects/rvt/assets/images/hero/mobile/bg-mobile.jpg);
         
-        &--plt-mobile {
-            position: absolute;
-            top: -96%;
-            left: 0;
+        &--logo {margin-top: 40px;}
+        
+        &--text {
+            h1 {
+                font-size: 40px;
+                line-height: 48.76px;
+                color: white;
+            }
+        }
+
+        @media screen and (min-width: $desktop) {
+            background-image: url(../../projects/rvt/assets/images/hero/desktop/bg-desktop.jpg);
+            background-position: right top;
+
+            &--logo {margin-top: 60px;}
+
+            &--text {
+                h1 {
+                    font-size: 70px;
+                    line-height: 85.33px;
+                }
+            }
+        }
+    }
+
+    &__searchs {
+        margin: 20px 0;
+        color: $gray;
+
+        &--box {
             width: 100%;
-            animation-delay: 2s;
-        }
-        &--plt-person-mobile {
-            position: absolute;
-            left: 24%;
-            transform: translate(-50%, -50%);
-            top:41%;
-            animation-delay: 3s;
+            margin-bottom: 50px;
+            
+            &-about {
+                font-size: 14px;
+                font-weight: normal;
+                line-height: 22px;
+                margin-top: 10px;
+            }
+            &-select {
+                border: 1px solid $gray;
+                border-radius: 30px;
+                width: 100%;
+                height: 40px;
+                color: $gray;
+                line-height: 27px;
+                margin-top: 20px;
+                padding: 0 20px;
+            }
         }
 
-        @media screen and (min-width: calc($mobile + 1px)) and (max-width: $tablet) {
-            &--plt-mobile {
-                top: -70%;
-                left: 0;
-            }
-            &--plt-person-mobile {
-                left: 11%;
-                top: 40%;
+        @media screen and (min-width: $desktop) {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            margin-top: 50px;
+
+            &--box {
+                width: 220px;
             }
         }
-
-        @media screen and (min-width: $laptop) and (max-width: calc($desktop - 1px)) {
-            &--plt-left {
-                left: -70%;
-                display: block;
-            }
-            &--plt-right {
-                right: 0;
-                display: block;
-            }
-            &--plt-person {
-                right: 25%;
-                display: block;
-            }
-        }         
     }
 }

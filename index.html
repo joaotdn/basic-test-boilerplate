@@ -13,35 +13,81 @@
   <body>
     <div class="greenthumb page-item">
       <header class="greenthumb__hero">
-        <figure class="greenthumb__hero--logo">
-          <div class="row">
-            <a href="#" title="Back to home">
-              <img src="./assets/images/hero/desktop/logo-desktop.png" alt="Greenthumb brand" class="hide-from-mobile">
+        <div class="row">
+          <div class="greenthumb__hero--logo">
+            <a href="#" title="Back to Home">
+              <img src="./assets/images/hero/desktop/logo-desktop.png" alt="greenthumb brand">
             </a>
           </div>
-        </figure>
-        <img 
-            src="./assets/images/hero/desktop/left-leaves.png"
-            alt="Green plants"
-            class="hide-from-mobile greenthumb__hero--plt-left animate__animated animate__fadeInLeft animate__fast">
-        <img 
-          src="./assets/images/hero/desktop/plantperson.png"
-          alt="Man holding a plant"
-          class="hide-from-mobile greenthumb__hero--plt-person animate__animated animate__fadeInRight animate__fast">
-        <img 
-          src="./assets/images/hero/desktop/right-leaves.png"
-          alt="Green plants"
-          class="hide-from-mobile greenthumb__hero--plt-right animate__animated animate__fadeInRight animate__fast">
-
-        <img 
-            src="./assets/images/hero/mobile/mobile-leaves.png"
-            alt="Green plants"
-            class="hide-from-desktop greenthumb__hero--plt-mobile animate__animated animate__fadeInDown">
-          <img 
-            src="./assets/images/hero/mobile/mobile-plantperson.png"
-            alt="Man holding a plant"
-            class="hide-from-desktop greenthumb__hero--plt-person-mobile animate__animated animate__fadeInLeft">
+          <div class="greenthumb__hero--text">
+            <h1>
+              Find your<br>
+              next green<br>
+              friend
+            </h1>
+            <a href="#searchs" title="Go to searchs green thumbs">
+              <img src="./assets/images/icons/arrow-down.svg" alt="arrow from down">
+            </a>
+          </div>
+        </div>
       </header>
+
+      <section id="searchs" class="row greenthumb__searchs">
+        <div class="greenthumb__searchs--box">
+          <figure>
+            <img 
+              src="./assets/images/illustrations/sun.png" 
+              alt="Smiley sun"
+              width="75">
+            <figcaption class="greenthumb__searchs--box-about">
+              <strong>1.</strong> Set the amount of <strong>sunlight</strong><br> your plant will get.
+            </figcaption>
+          </figure>
+          <select name="sunlight" class="greenthumb__searchs--box-select">
+            <option selected>Select...</option>
+            <option value="no">No</option>
+            <option value="low">Low</option>
+            <option value="hight">Hight</option>
+          </select>
+        </div>
+
+        <div class="greenthumb__searchs--box">
+          <figure>
+            <img 
+              src="./assets/images/illustrations/wateringcan.png" 
+              alt="Smiley wateringcan"
+              width="75">
+            <figcaption class="greenthumb__searchs--box-about">
+              <strong>2.</strong> How often do you want to<br>
+              water your <strong>plant</strong>?
+            </figcaption>
+          </figure>
+          <select name="wateringcan" class="greenthumb__searchs--box-select">
+            <option selected>Select...</option>
+            <option value="regularly">Regularly</option>
+            <option value="daily">Daily</option>
+            <option value="rarely">Rarely</option>
+          </select>
+        </div>
+
+        <div class="greenthumb__searchs--box">
+          <figure>
+            <img 
+              src="./assets/images/illustrations/dog.png" 
+              alt="Brown dog"
+              width="75">
+            <figcaption class="greenthumb__searchs--box-about">
+              <strong>3.</strong> Do you have pets? Do<br>
+              they <strong>chew</strong> plants?
+            </figcaption>
+          </figure>
+          <select name="dog" class="greenthumb__searchs--box-select">
+            <option selected>Select...</option>
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+          </select>
+        </div>
+      </section>
     </div>
     <div class="load-container"></div>
     <script src="./assets/js/main.js"></script>

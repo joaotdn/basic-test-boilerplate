@@ -7,15 +7,3 @@
         max-width: 1300px;
     }
 }
-
-.hide-from-mobile {
-    @media screen and (min-width: $laptop) {
-        display: none;
-    }
-}
-
-.hide-from-desktop {
-    @media screen and (min-width: 0) and (max-width: calc($laptop - 1px)) {
-        display: none;
-    }
-}

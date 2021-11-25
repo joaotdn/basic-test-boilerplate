@@ -4,6 +4,7 @@ $green-light: #75BC97;
 $orange: #FD9872;
 $white: #ffffff;
 $gray: #848484;
+$light-gray: #F2F2F2;
 
 // RESPONVIVE
 $mobile: 480px;
@@ -14,7 +15,7 @@ $desktop: 1224px;
 
 body {
     font-family: "Montserrat", sans-serif;
-    background-color: #ffffff;
+    background-color: $white;
     margin: 0;
     padding: 0;
 }

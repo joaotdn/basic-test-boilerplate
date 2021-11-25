@@ -35,12 +35,12 @@
     }
 
     &__searchs {
-        margin: 20px 0;
-        color: $gray;
+        padding-top: 20px;
+        padding-bottom: 20px;
 
         &--box {
             width: 100%;
-            margin-bottom: 50px;
+            margin: 50px 0;
             
             &-about {
                 font-size: 14px;
@@ -63,9 +63,6 @@
         @media screen and (min-width: $desktop) {
             display: flex;
             justify-content: space-between;
-            margin: 0 auto;
-            margin-top: 50px;
-
             &--box {
                 width: 220px;
             }
@@ -73,9 +70,37 @@
     }
 
     &__results {
+        background-color: $light-gray;
+        padding: 50px 0;
+
         &--fail, &--success {
             display: none;
+            background-color: $light-gray;
             &.active {display: block;}
+        }
+
+        &--fail {
+            &.active {
+                color: $gray;
+            display: flex;
+            justify-content: space-between;
+
+            h2 {
+                font-size: 45px;
+                line-height: 54.86px;
+            }
+            p {
+                font-size: 16px;
+                line-height: 27px;
+            }
+            }
+        }
+
+        &--success {
+            h2 {
+                font-size: 55px;
+                margin: 20 0 50 0;
+            }
         }
     }
 }

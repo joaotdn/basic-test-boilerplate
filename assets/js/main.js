@@ -34,17 +34,20 @@
             sun: GREENTHUMB.list.sunValue,
             water: GREENTHUMB.list.walterValue,
             pets: GREENTHUMB.list.dogValue
-        }), {method: 'GET', mode: 'cors',  headers: { "Content-Type" : "application/json" }})
+        }))
         .then(data => {
             return data.json();
         }).then(res => {
-            if (res.status && res.status !== 200) {
-                document.querySelector('.greenthumb__results--fail').classList.add('active');
-                document.querySelector('.greenthumb__results--success').classList.remove('active');
-            } else {
+            if (res.status && res.status === 200) {
                 document.querySelector('.greenthumb__results--success').classList.add('active');
                 document.querySelector('.greenthumb__results--fail').classList.remove('active');
-                // faltou aplicar o conteudo usando innerHTML, nao deu tempo
+                let planList = [];
+                for(let res = 1; res < res.lenght; re++) {
+                    console.log(res);
+                }
+            } else {
+                document.querySelector('.greenthumb__results--fail').classList.add('active');
+                document.querySelector('.greenthumb__results--success').classList.remove('active');
             }
         }).catch(errors => {
             console.log(errors);
